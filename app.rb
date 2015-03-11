@@ -13,7 +13,7 @@ end
 post '/favorites' do
   file = JSON.parse(File.read('data.json'))
   unless params[:name] && params[:oid]
-    return "Invalid Request"
+    return 'Invalid Request'
   end
   movie = { name: params[:name], oid: params[:oid] }
   file << movie
